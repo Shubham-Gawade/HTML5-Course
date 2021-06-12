@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Form Validation</title>
+	<style>
+		body{
+			background-color:skyblue;
+		}
+		#container{
+			width:960px;
+			margin: 0 auto 0 auto;
+			border:1px #000 solid;
+			padding:20px;
+			background-color:#ffffff;
+		}
+	</style>
+	<script>
+		function checkValidation()
+		{
+			var firstname=document.getElementByName("firstname");
+			if(firstname==null)
+			{	
+				alert(firstname);
+			}
+		}
+	</script>
+</head>
+<body>
+	<div id="container">
+	<h1 style="text-align:center">Employee Registration Form</h1>
+	<form onsubmit="checkValidation()">
+		<fieldset>
+			<legend>Personal Info:</legend>
+			<p>
+				<span style="color:red">*</span><label for="firstname">First Name:</label>
+				<input type="text" name="firstname" required>
+			</p>
+			<br>
+			<p>
+				<span style="color:red">*</span><label for="lastname">Last Name:</label>
+				<input type="text" name="lastname" required>
+			</p>
+		</fieldset>
+		<br><br>
+		<fieldset>
+			<legend>Contact Details:</legend>
+		<p>
+			<span style="color:red">*</span><label for="email">Email:</label>
+			<input type="email" name="email" required>
+		</p>
+		<br>
+		<p>
+			<span style="color:red">*</span><label for="phone">Phone No:</label>
+			<input type="tel" name="phone" required>
+		</p>
+		<br>
+		</fieldset>
+		<br>
+		<p>
+			<label for="gender">Gender:</label>
+			<input type="radio" name="gender" value="male" checked>Male
+			<input type="radio" name="gender" value="female">Female
+			<input type="radio" name="gender" value="others">Others
+		</p>
+		<br>
+		<p>
+			<span style="color:red">*</span><label for="location">Location:</label>
+			<input list="location" required>
+			<datalist id="location">
+				<option value="Mumbai"></option>
+				<option value="Pune"></option>
+				<option value="Banblore"></option>
+				<option value="Chennai"></option>
+				<option>Delhi</option>
+				<option>Patna</option>
+			</datalist>
+		</p>
+		<br>
+		<p>
+			<script type="text/javascript">
+				function updateTextInput(val){
+					document.getElementById('textInput').value=val;
+				}
+			</script>
+			<label for="salary">Expected Salary:</label>
+			<input id="salary" type="range" name="range" min="300000" max="1000000" onchange="updateTextInput(this.value);">
+			<input type="text" id="textInput" required>
+		</p>
+		<br>
+		<p>
+			<label for="skills">Skills Known:</label>
+			<table>
+				<tr>
+					<td><input type="checkbox" name="skills" value="html">HTML</td>
+					<td><input type="checkbox" name="skills" value="css">CSS</td>
+				</tr>
+				<tr>
+					<td><input type="checkbox" name="skills" value="java">JAVA</td>
+					<td><input type="checkbox" name="skills" value="python">Python</td>
+				</tr>
+				<tr>
+					<td><input type="checkbox" name="skills" value="angular">Angular</td>
+					<td><input type="checkbox" name="skills" value="node">Node</td>
+				</tr>
+			</table>
+		</p>
+		<br>
+		<p>
+			<label for="website">Your Website URL:</label>
+			<input type="url" name="website">
+		</p>
+		<br>
+		<p>
+			<span style="color:red">*</span><label for="dateofbirth">Date of Birth:</label>
+			<input type="date" name="dateofbirth" required>
+		</p>
+		<br>
+		<p>
+			<span style="color:red">*</span><label for="exp">Years of Experience:</label>
+			<input type="number" name="exp" required>
+		</p>
+		<br>
+		<p>
+			<label for="Suggestion">Suggestion:</label>
+			<br>
+			<textarea id="Suggestion" name="Suggestion" rows="4" cols="50" maxlength="200"></textarea>
+		</p>
+		<p>
+			<input type="submit" name="submit" value="Submit">
+		</p>	
+	</form>
+	<div>
+</body>
+</html>

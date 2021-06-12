@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>HTML5 Audio and Video</title>
+<style>
+	body{
+		background-color:lightgreen;
+	}
+	table{
+		border-collapse:collapse;
+	}
+	table tr,td,th{
+		padding:20px;
+	}
+	h3,h2,h1{
+		text-align:center;
+	}
+	#container{
+		width:1000px;
+		margin-left:150px;
+	}
+</style>
+<script>
+	window.addEventListener("play", function(evt)
+	{
+		if(window.$_currentlyPlaying)
+		{
+			window.$_currentlyPlaying.pause();
+		} 
+		window.$_currentlyPlaying = evt.target;
+	}, true);
+	
+	window.onload=function(){
+		document.getElementById("id1").play();
+	}
+</script>
+</head>
+<body>
+	<h1>My Playlist</h1>
+	<div id="container">
+		<table id="playlist" border="1">
+			<tr>
+				<th><h2>Audio Tracks</h2></th>
+				<td>
+					<h3>Closer</h3>
+					<audio  id="id1" controls>
+					<source src="Audios/Closer.mp3" type="audio/mp3">
+					Sorry, your browser does not support the audio tag
+					</audio>
+				</td>
+				<td>
+					<h3>Believer</h3>
+					<audio controls>
+					<source src="Audios/Believer.mp3" type="audio/mp3">
+					Sorry, your browser does not support the audio tag
+					</audio>
+				</td>
+				<td>
+					<h3>Love Your Voice</h3>
+					<audio controls>
+					<source src="Audios/Love Your Voice.mp3" type="audio/mp3">
+					Sorry, your browser does not support the audio tag
+					</audio>
+				</td>
+			</tr>
+			<tr>
+				<th><h2>Video Tracks</h2></th>
+				<td>
+					<h3>Sparrow</h3>
+					<video width="320" height="240" controls>
+					  <source src="Videos/Video1.mp4" type="video/mp4">
+					  Sorry, your browser does not support the video tag.
+					</video>
+				</td>
+				<td>
+					<h3>Woodpecker</h3>
+					<video width="320" height="240" controls>
+					  <source src="Videos/Video2.mp4" type="video/mp4">
+					  Sorry, your browser does not support the video tag.
+					</video>
+				</td>
+				<td>
+					<h3>Reindeer</h3>
+					<video width="320" height="240" controls>
+					  <source src="Videos/Video3.mp4" type="video/mp4">
+					  Sorry, your browser does not support the video tag.
+					</video>
+				</td>
+			</tr>
+		</table>
+	</div>
+</body>
+</html>

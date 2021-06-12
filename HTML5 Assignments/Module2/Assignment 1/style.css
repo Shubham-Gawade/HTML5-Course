@@ -1,0 +1,128 @@
+*{
+	margin: 0 auto 0 auto;
+	text-align: left;
+}
+
+body{
+	margin: 0;
+	padding: 0;
+	text-align: left;
+	font-size: 13px;
+	font-family: arial,helvetica,sens-serif;
+	color: #000000;
+	background-color:lightblue;
+}
+
+h2{
+	padding-bottom:10px;
+}
+
+h3{
+	font-size:16px;
+	font-weight:bold;
+	padding:10px 0;
+	color:#054dbc;
+}
+
+h4{
+	font-size:15px;
+	font-weight:bold;
+	padding-bottom:5px;
+	color:#054dbc;
+}
+
+#container{
+	width:960px;
+}
+
+#header{
+	width:960px;
+	height:85px;
+	background-color:blue;
+}
+
+#header h1{
+	float:left;
+	color:black;
+	font-size:43px;
+	padding:20px 0 0 20px;
+}
+
+#menu{
+	display:block;
+	float:left;
+	clear:both;
+	width:960px;
+	height:54px;
+	background-color:lightgray;
+}
+
+#menu ul{
+	list-style:none;
+	padding: 0;
+	padding-top:18px;
+	margin-left:auto;
+	width:960px;
+}
+
+#menu li{
+	list-style:none;
+	padding: 0;
+	display: inline;
+}
+
+#menu li a{
+	float:left;
+	color:black;
+	text-decoration:none;
+	text-align:center;
+	font-size:15px;
+	font-weight:bold;
+	padding: 0px 13px 0 13px;
+}
+
+#content{
+	display:block;
+	width:920px;
+	margin-top:15px;
+	float:left;
+	background:white;
+	border-radius:10px;
+	border:6px solid #1C476E;
+	padding:15px;
+	margin-left:0px;
+}
+
+.float{
+	float:right;
+	margin:15px;
+}
+
+#eduQua{
+	border-collapse: collapse;
+} 
+
+#eduQua th, td{
+  padding: 15px;
+  text-align: left;
+}
+
+#eduQua tr:hover{
+	background-color: #ddd;
+}
+
+#techSkills{
+	border-collapse: collapse;
+}
+
+#techSkills tr:hover{
+	background-color: #ddd;
+}
+
+#techSkills th, td{
+  padding: 15px;
+  text-align: left;
+}
+pre{
+	text-align : left;
+}

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html manifest="developer.manifest">
+<head>
+<link rel="stylesheet" href="css/style.css" type="text/css">
+<title>Blue Developer Directory</title>
+<script type="text/javascript">
+function initStorage(){
+  function saveName(){
+    var name = document.getElementById('name');
+    localStorage.setItem('name',name.value);
+  }
+  
+  function saveEmail(){
+    var email = document.getElementById('email');
+    localStorage.setItem('email',email.value);
+  }
+  
+  //Run functions
+  saveName();
+  saveEmail();
+}
+
+function displayName(){ 
+  if(localStorage.getItem('name') != null){
+    document.write('Welcome Back, '+localStorage.getItem('name'));
+  }
+}
+  
+function showText(){
+  if(localStorage.getItem('email') == null){
+    document.write('<p>Please enter your email address</p>');
+  } else {
+    document.write('<p><strong>Subscribed Email:</strong> '+localStorage.getItem('email')+'</p> ');
+  }
+}
+
+function clearAll(){
+  localStorage.clear();   
+  window.location.reload()
+}
+</script>
+</head>
+<body>
+  <div id="container">
+    <header>
+      <h1><span class="blue-text">Blue</span> Developer Directory</h1>
+      <h2>Find A Developer <span class="white-text">NOW</span></h2>
+    </header>
+    
+    <nav id="menu">
+      <ul>
+        <li class="menuitem"><a href="index.html">Home</a></li>
+        <li class="menuitem"><a href="about.html">About Us</a></li>
+        <li class="menuitem"><a href="browse.html">Browse Developers</a></li>
+        <li class="menuitem"><a href="register.html">Register As Developer</a></li>
+        <li class="menuitem"><a href="contact.html">Contact Us</a></li>
+      </ul>
+      <div id="displayname">
+        <script type="text/javascript">
+          displayName();
+        </script>
+      </div>
+      </nav>
+     
+     <aside>
+      <nav id="leftmenu">
+      <h3>Links</h3>
+        <ul>
+          <li><a href="browse.html">SEO</a></li>
+          <li><a href="browse.html">PHP</a></li>
+          <li><a href="browse.html">Ajax</a></li>
+          <li><a href="browse.html">jQuery</a></li>
+          <li><a href="browse.html">Web design</a></li>
+          <li><a href="browse.html">Web Programming</a></li>
+          <li><a href="browse.html">Content Creation</a></li>
+          <li><a href="browse.html">Internet Marketing</a></li>
+          <li><a href="browse.html">XHTML Templates</a></li>
+        </ul>
+        
+        <div>
+        <br><br>
+        <h3>Newsletter</h3>
+        <script type="text/javascript">
+          showText();
+        </script>
+        <form id="news" onsubmit="initStorage()">
+          Name: <input type="text" id="name" name="name">
+          Email: <input type="email" id="email" name="email">
+          <input type="submit" value="Send">
+          <a href="#" onClick="clearAll()">Clear</a>
+        </form>
+      </div>
+      </nav>
+  
+    </aside>
+    
+    <section>
+      <h2>Blue Developer Directory Info</h2>
+      <p>This page is cached</p>
+      <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo fugiat error eos consequatur repellendus, inventore sit provident consequuntur impedit, excepturi necessitatibus porro placeat eligendi perferendis pariatur sequi rem aliquid reprehenderit.</div>
+      <div>Nesciunt repudiandae dolorem ea fugiat laborum similique est eaque, consequatur deserunt autem accusamus quidem a animi reprehenderit maxime odio libero sapiente dolor perferendis commodi iste nam. Voluptatibus ipsum tempore deserunt.</div>
+      <div>Dolore dicta nobis expedita quidem rerum necessitatibus quam iure quia vel provident, inventore hic itaque, nesciunt. Sunt, maiores, nobis! Doloribus adipisci voluptate amet, perspiciatis cupiditate quibusdam eum vero nam omnis.</div>
+      <div>Pariatur nihil quas ducimus, eos et facere, culpa distinctio maiores vel ut odit aliquam hic corporis illum. Aperiam similique adipisci quis, odit vero voluptate, tenetur consectetur, eveniet natus atque non.</div>
+      <div>Minus beatae, nam accusantium exercitationem, vel alias quaerat nobis laudantium voluptatem quos adipisci rem, saepe fugit. Illum porro inventore saepe, distinctio, tempora alias! Nihil sapiente accusamus reprehenderit, ducimus alias labore.</div>
+      <div>Sed, quam, porro. Sunt, culpa voluptate error omnis sapiente, repudiandae rerum laboriosam, maiores perspiciatis impedit, mollitia dolores reiciendis harum soluta ullam. Reiciendis reprehenderit, saepe sed voluptatem neque in, illum unde.</div>
+    </section>
+    
+    
+  </div><!--container end-->
+  <div style="clear;both"></div>
+  <footer>
+    Copyright &copy; 2013, Blue Web Developer Directory - <a href="info.html">Info</a>
+  </footer>
+</body>
+</html>

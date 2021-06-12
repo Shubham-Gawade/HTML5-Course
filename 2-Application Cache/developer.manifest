@@ -1,0 +1,17 @@
+CACHE MANIFEST
+# 2013-02-08
+
+# files to cache
+CACHE:
+index.html
+info.html
+css/style.css
+images/background.png
+
+# Require the user to be online
+NETWORK:
+login.php
+
+# file to serve in case file not found in cache
+FALLBACK:
+*.html offline.html

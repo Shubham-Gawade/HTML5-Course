@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="css/home_css.css" />
+<title>Blue Developer Directory</title>
+</head>
+
+<body>
+<div id="container">
+	<div id="header">
+        <h1><span class="blue-text">Blue</span> Developer Directory</h1>
+        <h2>Find A Developer <span class="white-text">NOW</span></h2>
+     </div><!--header end-->
+        
+    <div id="menu">
+        <ul>
+            <li class="menuitem"><a href="home.html">Home</a></li>
+            <li class="menuitem"><a href="about.html">About Us</a></li>
+            <li class="menuitem"><a href="browse.html">Browse Developers</a></li>
+            <li class="menuitem"><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </div><!--menu end-->
+	
+    <div id="leftmenu">
+        <h3>Links</h3>
+        <ul>
+            <li><a href="browse.html">SEO</a></li>
+            <li><a href="browse.html">PHP</a></li>
+            <li><a href="browse.html">Ajax</a></li>
+            <li><a href="browse.html">jQuery</a></li>
+            <li><a href="browse.html">Web design</a></li>
+            <li><a href="browse.html">Web Programming</a></li>
+            <li><a href="browse.html">Content Creation</a></li>
+            <li><a href="browse.html">Internet Marketing</a></li>
+            <li><a href="browse.html">XHTML Templates</a></li>
+        </ul>
+    </div><!--leftmenu end-->
+    
+	<div id="content">
+		<form>
+				<div>
+			    <fieldset>
+				    <legend>Personal Info:</legend>
+					<p>
+						<label for="firstname">First Name:</label>
+						<input type="text" name="firstname">
+					</p>
+					<br>
+					<p>
+						<label for="lastname">Last Name:</label>
+						<input type="text" name="lastname">
+					</p>
+				</fieldset>
+				<br><br>
+				<fieldset>
+				    <legend>Contact Details:</legend>
+				<p>
+					<label for="email">Email:</label>
+					<input type="text" name="email">
+				</p>
+				<br>
+				<p>
+					<label for="phone">Phone No:</label>
+					<input type="text" name="phone">
+				</p>
+				</fieldset>
+				<br>
+				<p>
+					<label for="call">Best Time to Call:</label>
+					<input type="radio" name="call" value="morning" checked>Morning
+					<input type="radio" name="call" value="afternoon">Afternoon
+					<input type="radio" name="call" value="evening">Evening
+				</p>
+				<br>
+				<p>
+					<label for="budget">Budget:</label>
+					<select type="list" name="budget">
+					<option>---Select One---</option>
+						<option value="100-500">$100-$500</option>
+						<option value="500-1000">$500-$1000</option>
+						<option value="1000-1500">$1000-$1500</option>
+						<option value="not sure">Not Sure</option>
+					</select>
+				</p>
+				<br>
+				<p>
+					<label for="skills">Skills Known:</label>
+					<table>
+						<tr>
+							<td><input type="checkbox" name="skills" value="html">HTML</td>
+							<td><input type="checkbox" name="skills" value="css">CSS</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" name="skills" value="java">JAVA</td>
+							<td><input type="checkbox" name="skills" value="python">Python</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" name="skills" value="angular">Angular</td>
+							<td><input type="checkbox" name="skills" value="node">Node</td>
+						</tr>
+					</table>
+				</p>
+				<br>
+				<p>
+					<label for="feedback">Feedback:</label>
+					<br>
+					<textarea id="feedback" name="feedback" rows="4" cols="50" maxlength="200"></textarea>
+				</p>
+				<p>
+					<input type="submit" name="submit" value="Submit Inquiry">
+				</p>	
+			</form>
+    </div><!--content end-->
+	
+</div><!--container end-->
+</body>
+</html>

@@ -1,0 +1,25 @@
+.milkInfo {
+    width: 500px;
+    border-collapse: collapse;
+	align: center;
+}
+
+.milkInfo td {
+    border: 1px solid black;
+	text-align: center;
+}
+ 
+.milkInfo td:nth-child(even) {
+    background-color: #E4FFB7;
+}
+ 
+.milkInfo td:nth-child(odd) {
+    background-color: #EFFFD2;
+}
+ 
+.milkInfo tr:first-child td {
+    text-align: center;
+	font-weight: bolder;
+	background-color: #80B327;
+	color: white;
+}

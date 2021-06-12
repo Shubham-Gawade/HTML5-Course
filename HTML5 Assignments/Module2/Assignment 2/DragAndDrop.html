@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>HTML5 Drag And Drop</title>
+  <style>
+    #left_div {
+      border: 1px #aaaaaa solid;
+      float: left;
+	  padding: 10px;
+      height: 240px;
+      width: 240px;
+    }
+
+    #right_div {
+      border: 1px #aaaaaa solid;
+      float: left;
+	  padding: 10px;
+      height: 240px;
+      width: 240px;
+    }
+    #drag_id {
+      float: left;
+    }
+  </style>
+  <script src="modernizr.custom.js"></script>
+  <script>
+    if (window.FileReader && Modernizr.draganddrop) {
+      function drag(ev) {
+        ev.dataTransfer.setData("dragMyImage", ev.target.id);
+      }
+
+      function drop(ev) {
+        ev.preventDefault();
+        var data = ev.dataTransfer.getData("dragMyImage");
+        ev.target.appendChild(document.getElementById(data));
+      }
+
+      function allowDrop(ev) {
+        ev.preventDefault();
+      }
+    } else {
+      document.write('This browser can NOT support Drag and Drop');
+    }
+  </script>
+</head>
+<body>
+  <h1>Drag My Logo into the box</h1>
+  <div id="left_div" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+  <img id="drag_id" src="my logo.jpg" height=240 width=240 alt="my Logo" draggable="true" ondragstart="drag(event)">
+  <div id="right_div" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+</body>
+</html>
